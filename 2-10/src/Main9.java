@@ -16,7 +16,7 @@ public class Main9 {
                 break;
             case '/':
                 if(num2==0){
-                    System.out.println("エラー:０で割ることはできません");
+                    System.out.println("エラー:0で割ることはできません");
                 }else{
                     System.out.println(num1/num2);
                 }
