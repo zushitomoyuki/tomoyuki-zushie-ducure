@@ -13,7 +13,7 @@ class Word {
     }
 }
 
-public class EnglishWordQuizAppSimplest {
+public class EnglishWordQuizApp {
     private static final int MAX_WORDS = 20;
     private static final List<Word> wordList = new ArrayList<>();
     private static final Scanner scanner = new Scanner(System.in);
@@ -99,16 +99,16 @@ public class EnglishWordQuizAppSimplest {
             Word currentWord = wordList.get(i);
             
             System.out.println("--- 第" + (i + 1) + "問 ---");
-            System.out.println("日本語: " + currentWord.japanese);
-            System.out.print("あなたの解答 (英単語): ");
+            System.out.println(currentWord.english + "の意味は？");
+            System.out.print("あなたの解答 (日本語訳): ");
             
             String userAnswer = scanner.nextLine().trim();
             
-            if (userAnswer.equalsIgnoreCase(currentWord.english)) {
+            if (userAnswer.equals(currentWord.japanese)) { 
                 System.out.println("⭕️ 正解！");
                 correctCount++;
             } else {
-                System.out.println("❌ 不正解... 正解は '" + currentWord.english + "' でした。");
+                System.out.println("❌ 不正解... 正解は '" + currentWord.japanese + "' でした。");
             }
         }
         

@@ -104,7 +104,7 @@ public class EnglishWordQuizAppArrays {
             String userAnswer = scanner.nextLine().trim();
             String correctAnswer = japaneseWords.get(index);
             
-            if (userAnswer.equals(correctAnswer)) { // 完全一致で判定
+            if (userAnswer.equals(correctAnswer)) { 
                 System.out.println("⭕️ 正解です！"); 
                 correctCount++;
             } else {
